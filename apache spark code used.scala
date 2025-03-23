@@ -11,18 +11,18 @@ val parsedData = itineraries.map(line => {
     val seatsRemaining = try {
       cols(13).toInt
     } catch {
-      case e: NumberFormatException => 0 // Default to 0 if invalid
+      case e: NumberFormatException => 0 
     }
     val totalFare = try {
       cols(12).toDouble
     } catch {
-      case e: NumberFormatException => -1.0 // Return -1 for invalid data
+      case e: NumberFormatException => -1.0 
     }
     
     val totalTravelDistance = try {
       cols(14).toDouble
     } catch {
-      case e: NumberFormatException => -1.0 // Return -1 for invalid data
+      case e: NumberFormatException => -1.0 
     }
     
     if (totalFare > 0 && totalTravelDistance > 0) {
@@ -48,5 +48,5 @@ val sortedData = finalData.sortBy(_._2)
 sortedData.collect().foreach(println)
 
 val endTime = System.nanoTime()
-val duration = (endTime - startTime) / 1e9d  // Convert to seconds
+val duration = (endTime - startTime) / 1e9d  
 println(s"Execution time: $duration seconds")
