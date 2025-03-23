@@ -1,3 +1,5 @@
+#Python cleaner script
+
 input_file = "C:/Users/mjako/OneDrive/Desktop/Cleaned_ITINERARIES.CSV"
 output_file = "C:/Users/mjako/OneDrive/Desktop/CI2.CSV"
 
